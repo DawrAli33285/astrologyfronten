@@ -3,11 +3,56 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Layout from './components/layout';
+import ChartCalculator from './chartcalculator';
+import AstrologyReport from './fullreport';
+import SiderealChartPage from './chartreport';
+import FAQPage from './faq';
+import TeamPage from './teams';
+import MemberBioPage from './member';
+import LearnChartPage from './learnchart';
+import CoursesPage from './course';
+import Readings from './readings';
+import ContactPage from './contact';
+
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Layout />,
+    children: [
+      { path: '/', element: <App /> },
+      { path: '/about', element: <App /> },
+      { path: '/charts', element: <App /> },
+      { path: '/learn', element: <App /> },
+      {path:'/readings',element:<Readings/>},
+      { path: '/software', element: <App /> },
+      { path: '/more', element: <App /> },
+      { path: '/contact', element: <App /> },
+      { path: '/true-signs', element: <App /> },
+      { path: '/sidereal-astrology', element: <App /> },
+      { path: '/faq', element: <FAQPage /> },
+      { path: '/team', element: <TeamPage /> },
+      { path: '/team/:name', element: <MemberBioPage /> },
+      { path: '/terms', element: <App /> },
+      { path: '/free-report', element: <App /> },
+      { path: '/newsletter', element: <App /> },
+      { path: '/partner', element: <App /> },
+      { path: '/chart-calculator', element: <ChartCalculator /> },
+      { path: '/chart-report', element: <SiderealChartPage /> },
+      { path: '/full-report', element: <AstrologyReport /> },
+      { path: '/chart-dictionary', element: <LearnChartPage /> },
+      { path:'/chart-course', element: <CoursesPage />},
+     {path:'/contact',element:<ContactPage/>}
+    ],
+  },
+]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
