@@ -112,7 +112,7 @@ export default function ContactPage() {
           ))}
 
           <a
-            href="https://masteringthezodiac.com/sidereal-astrology-faq"
+            href="/faq"
             className="block mt-6 bg-blue-600 hover:bg-blue-700 text-white p-4 rounded transition-colors duration-200"
           >
             <div className="flex items-center">
@@ -132,7 +132,7 @@ export default function ContactPage() {
           <div>
             <p className="mb-4 text-gray-800 leading-relaxed">
               Didn't find the answer to your question in the{' '}
-              <a href="https://masteringthezodiac.com/sidereal-astrology-faq" className="text-blue-600 hover:underline">
+              <a href="/faq" className="text-blue-600 hover:underline">
                 FAQ page
               </a>
               ? We are happy to answer any questions you might have.

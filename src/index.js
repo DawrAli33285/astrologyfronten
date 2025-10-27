@@ -15,6 +15,12 @@ import LearnChartPage from './learnchart';
 import CoursesPage from './course';
 import Readings from './readings';
 import ContactPage from './contact';
+import NewsletterPage from './newsletter';
+import JoinNewsletterPage from './joinnewsletter';
+import HoroscopePage from './weeklyhoroscope';
+import SiderealAstrologyPage from './siderealastrology';
+import MediaAppearancesPage from './appearance';
+import TrueSkyLanding from './software';
 
 
 const router = createBrowserRouter([
@@ -27,9 +33,9 @@ const router = createBrowserRouter([
       { path: '/charts', element: <App /> },
       { path: '/learn', element: <App /> },
       {path:'/readings',element:<Readings/>},
-      { path: '/software', element: <App /> },
+      { path: '/software', element: <TrueSkyLanding /> },
       { path: '/more', element: <App /> },
-      { path: '/contact', element: <App /> },
+      { path: '/contact', element: <ContactPage /> },
       { path: '/true-signs', element: <App /> },
       { path: '/sidereal-astrology', element: <App /> },
       { path: '/faq', element: <FAQPage /> },
@@ -37,14 +43,17 @@ const router = createBrowserRouter([
       { path: '/team/:name', element: <MemberBioPage /> },
       { path: '/terms', element: <App /> },
       { path: '/free-report', element: <App /> },
-      { path: '/newsletter', element: <App /> },
+      { path: '/newsletter', element: <NewsletterPage /> },
       { path: '/partner', element: <App /> },
       { path: '/chart-calculator', element: <ChartCalculator /> },
       { path: '/chart-report', element: <SiderealChartPage /> },
       { path: '/full-report', element: <AstrologyReport /> },
       { path: '/chart-dictionary', element: <LearnChartPage /> },
       { path:'/chart-course', element: <CoursesPage />},
-     {path:'/contact',element:<ContactPage/>}
+      { path:'/horoscope', element: <HoroscopePage />},
+      { path:'/joinnewsletter', element: <JoinNewsletterPage />},
+      { path:'/appearance', element: <MediaAppearancesPage />},
+      { path:'/siderealastrology', element: <SiderealAstrologyPage />}
     ],
   },
 ]);

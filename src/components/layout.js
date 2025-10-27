@@ -116,7 +116,7 @@ function Layout() {
     { name: 'LEARN', path: '/learn', hasSubmenu: true },
     { name: 'READINGS', path: '/readings', hasSubmenu: false },
     { name: 'SOFTWARE', path: '/software', hasSubmenu: false },
-    { name: 'MORE', path: '/more', hasSubmenu: false },
+    { name: 'MORE', path: '/more', hasSubmenu: true },
     { name: 'CONTACT', path: '/contact', hasSubmenu: false },
   ];
 
@@ -133,7 +133,12 @@ function Layout() {
     LEARN:[
       { name: 'Chart Dictionary', path: '/chart-dictionary' },
       { name: 'Sidereal Courses', path: '/chart-course' },
-    ]
+    ],
+    MORE:[
+        {name:'Latest NewsLetter', path:'/newsletter'},
+        {name:'Weekly Horoscope', path:'/horoscope'},
+        {name:'Media Appearances', path:'/appearance'}
+    ],
   };
 
   const handleSubmenuClick = () => {
