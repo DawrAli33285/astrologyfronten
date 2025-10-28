@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import AstrologyChart from './components/astrologychart';
 import AstrologyPlacements from './components/astrologyplacement';
 import { Link } from 'react-router-dom';
+import LocationSuggestionField from './components/locationsuggestionfield';
 
 const ChartCalculator = () => {
     const [formData, setFormData] = useState({
@@ -364,19 +365,12 @@ const ChartCalculator = () => {
                                 </label>
                             </div>
 
-                            <div>
-                                <label className="block text-gray-700 mb-2">Location:</label>
-                                <input
-                                    type="text"
-                                    name="location"
-                                    value={formData.location}
-                                    onChange={handleChange}
-                                    className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                                    placeholder="New York, NY, USA"
-                                    required
-                                />
-                            </div>
-
+                            <LocationSuggestionField
+    value={formData.location}
+    onChange={handleChange}
+    name="location"
+    required={true}
+/>
                             {error && (
                                 <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded">
                                     {error}
