@@ -1,5 +1,7 @@
 import React from 'react';
-
+import fst from "./images/whatis.jpg"
+import scnd from "./images/rtsidewhtis.png"
+import third from "./images/bulls.png"
 const SiderealAstrologyPage = () => {
   return (
     <div className="min-h-screen bg-white">
@@ -17,7 +19,7 @@ const SiderealAstrologyPage = () => {
         
 
         <div className="mb-8">
-          <img src="/api/placeholder/700/400" alt="Astrology Chart" className="w-full" />
+          <img src={fst} alt="Astrology Chart" className="w-full" />
         </div>
 
       
@@ -52,7 +54,7 @@ const SiderealAstrologyPage = () => {
 
   
         <div className="mb-6">
-          <img src="/api/placeholder/700/400" alt="Earth Orbit Diagram" className="w-full" />
+          <img src={scnd} alt="Earth Orbit Diagram" className="w-full" />
         </div>
 
         <p className="mb-4 text-sm leading-relaxed text-gray-700">
@@ -87,7 +89,7 @@ const SiderealAstrologyPage = () => {
 
   
         <div className="mb-8">
-          <img src="/api/placeholder/700/400" alt="Bulls" className="w-full" />
+          <img src={third} alt="Bulls" className="w-full" />
         </div>
 
         <p className="mb-8 text-sm md:text-base leading-relaxed">
