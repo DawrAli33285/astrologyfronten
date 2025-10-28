@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 
 export default function FAQPage() {
   const [openItems, setOpenItems] = useState(['report-vs-readings']);
@@ -13,6 +13,14 @@ export default function FAQPage() {
 
   const FAQItem = ({ id, question, children }) => {
     const isOpen = openItems.includes(id);
+    const contentRef = useRef(null);
+    const [height, setHeight] = useState(0);
+
+    useEffect(() => {
+      if (contentRef.current) {
+        setHeight(contentRef.current.scrollHeight);
+      }
+    }, [children]);
     
     return (
       <section id={id} className="mb-6">
@@ -20,16 +28,39 @@ export default function FAQPage() {
           onClick={() => toggleItem(id)}
           className="flex items-start gap-3 w-full text-left hover:text-gray-600 transition-colors"
         >
-          <span className={`text-sm mt-1 transition-transform ${isOpen ? 'rotate-90 text-[#5d4fad]' : 'text-black'}`}>
+          <span 
+            className="text-sm mt-1"
+            style={{ 
+              transform: isOpen ? 'rotate(90deg)' : 'rotate(0deg)',
+              color: isOpen ? '#5d4fad' : 'black',
+              transition: 'all 0.3s ease-in-out'
+            }}
+          >
             ▶
           </span>
-          <h3 className={`text-base font-bold ${isOpen ? 'text-[#5d4fad]' : 'text-black'}`}>{question}</h3>
+          <h3 
+            className="text-base font-bold"
+            style={{
+              color: isOpen ? '#5d4fad' : 'black',
+              transition: 'color 0.2s ease-in-out'
+            }}
+          >
+            {question}
+          </h3>
         </button>
-        {isOpen && (
-          <div className="ml-6 mt-3 text-gray-700 space-y-3">
+        <div 
+          ref={contentRef}
+          className="overflow-hidden"
+          style={{ 
+            maxHeight: isOpen ? `${height}px` : '0px',
+            opacity: isOpen ? 1 : 0,
+            transition: 'max-height 0.4s ease-in-out, opacity 0.4s ease-in-out'
+          }}
+        >
+          <div className="ml-6 mt-3 text-gray-700 space-y-3 pb-2">
             {children}
           </div>
-        )}
+        </div>
       </section>
     );
   };
