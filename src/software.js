@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function TrueSkyLanding() {
   return (
@@ -18,9 +19,9 @@ export default function TrueSkyLanding() {
         <p className="text-base md:text-lg text-gray-600 mb-8">
           ONLINE ASTROLOGY SOFTWARE
         </p>
-        <button className="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded font-medium transition">
+        <Link to="/admin/main" className="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded font-medium transition">
           LOGIN WITH GOOGLE
-        </button>
+        </Link>
 
     
     
@@ -95,9 +96,9 @@ export default function TrueSkyLanding() {
         <div className="text-center mb-12">
           <h3 className="text-3xl font-bold mb-4">FREE TIER OR</h3>
           <h3 className="text-3xl font-bold mb-6">$15/MONTH</h3>
-          <button className="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded font-medium transition">
+          <Link to="/admin/main" className="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded font-medium transition">
             LOGIN WITH GOOGLE
-          </button>
+          </Link>
         </div>
 
        
@@ -134,9 +135,9 @@ export default function TrueSkyLanding() {
         <h2 className="text-[30px] md:text-4xl font-bold mb-8">
           Astrology for everyone, anywhere
         </h2>
-        <button className="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded font-medium transition">
+        <Link to="/admin/main" className="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded font-medium transition">
           LOGIN WITH GOOGLE
-        </button>
+        </Link>
       </section>
 
 

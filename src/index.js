@@ -22,6 +22,15 @@ import SiderealAstrologyPage from './siderealastrology';
 import MediaAppearancesPage from './appearance';
 import TrueSkyLanding from './software';
 import SiderealSignCalculator from './sideralsigns';
+import AdminLayout from './components/adminlayout';
+import AdminSettings from './adminsettings';
+import AdminChat from './adminchat';
+import AdminDocs from './admindocs';
+import AdminProfilePage from './adminaccount';
+import AdminChart from './adminmainchart';
+import AdminMain from './adminmain';
+import TransitPage from './transitpage';
+import SynastryPage from './synastrypage';
 
 
 const router = createBrowserRouter([
@@ -56,6 +65,22 @@ const router = createBrowserRouter([
       { path:'/appearance', element: <MediaAppearancesPage />},
       { path:'/siderealastrology', element: <SiderealAstrologyPage />},
       {path:'/sidereal-signs',element:<SiderealSignCalculator/>}
+    ],
+  },
+  {
+    path: '/admin',
+    element: <AdminLayout />,
+    children: [
+      { path: '/admin/main', element: <AdminMain /> },
+      { path: '/admin/transit', element: <TransitPage /> },
+      { path: '/admin/graph', element: <App /> },
+      { path: '/admin/return', element: <App /> },
+      { path: '/admin/settings', element: <AdminSettings /> },
+      { path: '/admin/synastry', element: <SynastryPage /> },
+      { path: '/admin/composite', element: <App /> },
+      { path: '/admin/chat', element: <AdminChat /> },
+      { path: '/admin/docs', element: <AdminDocs /> },
+      { path: '/admin/account', element: <AdminProfilePage /> },
     ],
   },
 ]);

@@ -2,6 +2,8 @@ import React from 'react';
 import fst from "./images/whatis.jpg"
 import scnd from "./images/rtsidewhtis.png"
 import third from "./images/bulls.png"
+import fourth from "./images/underbulls.png"
+import fifth from "./images/watermark.png"
 const SiderealAstrologyPage = () => {
   return (
     <div className="min-h-screen bg-white">
@@ -127,7 +129,7 @@ const SiderealAstrologyPage = () => {
 
     
         <div className="mb-6">
-          <img src="/api/placeholder/700/400" alt="Constellation" className="w-full" />
+          <img src={fourth} alt="Constellation" className="w-full" />
         </div>
 
         <p className="mb-4 text-sm md:text-base leading-relaxed">
@@ -161,7 +163,7 @@ const SiderealAstrologyPage = () => {
 
       
         <div className="mb-8">
-          <img src="/api/placeholder/700/400" alt="Ophiuchus" className="w-full" />
+          <img src={fifth} alt="Ophiuchus" className="w-full" />
         </div>
 
         
@@ -322,7 +324,7 @@ const SiderealAstrologyPage = () => {
             <iframe
               width="100%"
               height="100%"
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              src="https://masteringthezodiac.com/videos/what-is-sidereal-astrology.mp4"
               title="Sidereal Astrology Video"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
