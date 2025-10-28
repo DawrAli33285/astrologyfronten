@@ -73,14 +73,22 @@ function App() {
           <p className="text-xl md:text-2xl text-gray-300 mb-8">
             Using the visible constellations in the sky.
           </p>
-          <button className="border-2 border-white px-8 py-3 text-lg hover:bg-white hover:text-black transition-colors duration-300">
-            LEARN MORE
-          </button>
+          <button
+  onClick={() => {
+    const section = document.getElementById("true-sidereal-section");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  }}
+  className="border-2 border-white px-8 py-3 text-lg hover:bg-white hover:text-black transition-colors duration-300"
+>
+  LEARN MORE
+</button>
         </div>
       </section>
 
     
-      <section className="py-[40px] px-4 bg-white">
+      <section id="true-sidereal-section" className="py-[40px] px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-light text-center mb-4">
             WHAT IS TRUE SIDEREAL ASTROLOGY?
@@ -152,111 +160,7 @@ function App() {
       </section>
 
      
-      <section className="py-[40px] px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-[26px] md:text-[30px] font-light text-center mb-16">
-            OUR SERVICES
-          </h2>
-          <hr className="border-gray-300 mb-16" />
-
-          <div className="grid md:grid-cols-3 gap-8 mb-16 justify-items-center">
-          
-            <div className="bg-gray-200 rounded-lg overflow-hidden shadow-lg hover:bg-indigo-600 group transition-all w-80">
-              <div className="bg-gray-300 group-hover:bg-indigo-500 h-44 flex items-center justify-center transition-colors">
-                <svg className="w-12 h-12 text-gray-500 group-hover:text-indigo-200" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-              </div>
-              <div className="bg-gray-400 group-hover:bg-indigo-600 text-white p-6 text-center transition-colors h-52 flex flex-col justify-center">
-                <h3 className="text-xl font-semibold mb-3">WEEKLY HOROSCOPES</h3>
-                <p className="mb-3 text-sm">Watch The Weekly Forecast</p>
-                <p className="text-2xl font-bold">FREE</p>
-              </div>
-            </div>
-
-            
-            <div className="bg-gray-200 rounded-lg overflow-hidden shadow-lg hover:bg-indigo-600 group transition-all w-80">
-              <div className="bg-gray-300 group-hover:bg-indigo-500 h-44 flex items-center justify-center transition-colors">
-                <svg className="w-12 h-12 text-gray-500 group-hover:text-indigo-200" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.07.62-.07.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z" />
-                </svg>
-              </div>
-              <div className="bg-gray-400 group-hover:bg-indigo-600 text-white p-6 text-center transition-colors h-52 flex flex-col justify-center">
-                <h3 className="text-xl font-semibold mb-3">SIDEREAL CHART CALCULATOR</h3>
-                <p className="mb-3 text-sm">View Your True Sidereal Birth Chart</p>
-                <p className="text-2xl font-bold">FREE</p>
-              </div>
-            </div>
-
-            
-            <div className="bg-gray-200 rounded-lg overflow-hidden shadow-lg hover:bg-indigo-600 group transition-all w-80">
-              <div className="bg-gray-300 group-hover:bg-indigo-500 h-44 flex items-center justify-center transition-colors">
-                <svg className="w-12 h-12 text-gray-500 group-hover:text-indigo-200" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58c-.39-.39-1.03-.39-1.41 0-.39.39-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37c-.39-.39-1.03-.39-1.41 0-.39.39-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0 .39-.39.39-1.03 0-1.41l-1.06-1.06zm1.06-10.96c.39-.39.39-1.03 0-1.41-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36c.39-.39.39-1.03 0-1.41-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z" />
-                </svg>
-              </div>
-              <div className="bg-gray-400 group-hover:bg-indigo-600 text-white p-6 text-center transition-colors h-52 flex flex-col justify-center">
-                <h3 className="text-xl font-semibold mb-3">CHART REPORT + E-READING</h3>
-                <p className="mb-3 text-sm">Order Your Full Report & E-Reading</p>
-                <p className="text-2xl font-bold">$95</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 justify-items-center">
-         
-            <div className="bg-gray-200 rounded-lg overflow-hidden shadow-lg hover:bg-indigo-600 group transition-all w-80">
-              <div className="bg-gray-300 group-hover:bg-indigo-500 h-44 flex items-center justify-center transition-colors">
-                <svg className="w-12 h-12 text-gray-500 group-hover:text-indigo-200" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
-                </svg>
-              </div>
-              <div className="bg-gray-400 group-hover:bg-indigo-600 text-white p-6 text-center transition-colors h-52 flex flex-col justify-center">
-                <h3 className="text-xl font-semibold mb-3">ASTROLOGY READINGS</h3>
-                <p className="mb-3 text-sm">Mp3 & Phone/Skype Readings</p>
-                <p className="text-xl font-bold mb-3">$145 - $245</p>
-                <button className="bg-white text-gray-700 px-6 py-2 rounded hover:bg-gray-100 transition-colors text-sm font-medium">
-                  GET READING
-                </button>
-              </div>
-            </div>
-
-       
-            <div className="bg-gray-200 rounded-lg overflow-hidden shadow-lg hover:bg-indigo-600 group transition-all w-80">
-              <div className="bg-gray-300 group-hover:bg-indigo-500 h-44 flex items-center justify-center transition-colors">
-                <svg className="w-12 h-12 text-gray-500 group-hover:text-indigo-200" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z" />
-                </svg>
-              </div>
-              <div className="bg-gray-400 group-hover:bg-indigo-600 text-white p-6 text-center transition-colors h-52 flex flex-col justify-center">
-                <h3 className="text-xl font-semibold mb-3">ASTROLOGY COURSES</h3>
-                <p className="mb-3 text-sm">Learn True Sidereal Astrology</p>
-                <p className="text-xl font-bold mb-3">$195 - $1495</p>
-                <button className="bg-white text-gray-700 px-6 py-2 rounded hover:bg-gray-100 transition-colors text-sm font-medium">
-                  TAKE COURSE
-                </button>
-              </div>
-            </div>
-
-          
-            <div className="bg-gray-200 rounded-lg overflow-hidden shadow-lg hover:bg-indigo-600 group transition-all w-80">
-              <div className="bg-gray-300 group-hover:bg-indigo-500 h-44 flex items-center justify-center transition-colors">
-                <svg className="w-12 h-12 text-gray-500 group-hover:text-indigo-200" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M20 18c1.1 0 1.99-.9 1.99-2L22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H0v2h24v-2h-4zM4 6h16v10H4V6z" />
-                </svg>
-              </div>
-              <div className="bg-gray-400 group-hover:bg-indigo-600 text-white p-6 text-center transition-colors h-52 flex flex-col justify-center">
-                <h3 className="text-xl font-semibold mb-3">ASTROLOGY SOFTWARE</h3>
-                <p className="mb-3 text-sm">True Sky Online Software</p>
-                <p className="text-xl font-bold mb-3">FREE - $15</p>
-                <button className="bg-white text-gray-700 px-6 py-2 rounded hover:bg-gray-100 transition-colors text-sm font-medium">
-                  ACCESS
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+    
     </div>
   );
 }

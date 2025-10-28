@@ -21,6 +21,7 @@ import HoroscopePage from './weeklyhoroscope';
 import SiderealAstrologyPage from './siderealastrology';
 import MediaAppearancesPage from './appearance';
 import TrueSkyLanding from './software';
+import SiderealSignCalculator from './sideralsigns';
 
 
 const router = createBrowserRouter([
@@ -53,7 +54,8 @@ const router = createBrowserRouter([
       { path:'/horoscope', element: <HoroscopePage />},
       { path:'/joinnewsletter', element: <JoinNewsletterPage />},
       { path:'/appearance', element: <MediaAppearancesPage />},
-      { path:'/siderealastrology', element: <SiderealAstrologyPage />}
+      { path:'/siderealastrology', element: <SiderealAstrologyPage />},
+      {path:'/sidereal-signs',element:<SiderealSignCalculator/>}
     ],
   },
 ]);

@@ -75,7 +75,7 @@ const MediaAppearancesPage = () => {
           <div className="flex flex-col md:flex-row gap-6 items-start">
             <div className="md:w-1/3">
               <img 
-                src={strangePlanetImg} 
+                src="./strange-planet.png"
                 alt="Strange Planet Podcast" 
                 className="w-full"
               />
@@ -102,7 +102,7 @@ const MediaAppearancesPage = () => {
           <div className="flex flex-col md:flex-row-reverse gap-6 items-start">
             <div className="md:w-1/3">
               <img 
-                src={earthAncientsImg} 
+                src="./earth-ancients.png" 
                 alt="Earth Ancients" 
                 className="w-full"
               />
@@ -129,7 +129,7 @@ const MediaAppearancesPage = () => {
           <div className="flex flex-col md:flex-row gap-6 items-start">
             <div className="md:w-1/3">
               <img 
-                src={skepticImg} 
+                src="./skeptic.png"
                 alt="Skeptic Metaphysicians" 
                 className="w-full"
               />
@@ -156,7 +156,7 @@ const MediaAppearancesPage = () => {
           <div className="flex flex-col md:flex-row-reverse gap-6 items-start">
             <div className="md:w-1/3">
               <img 
-                src={crrowImg} 
+                src="./crrow777.png"
                 alt="CRROW777 Radio" 
                 className="w-full"
               />

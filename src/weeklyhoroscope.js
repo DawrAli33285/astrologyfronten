@@ -1,8 +1,20 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 
 export default function HoroscopePage() {
   const [activeTab, setActiveTab] = useState('upcoming');
+
+  const videos = {
+    upcoming: {
+      id: '4jQcGhRZZsM',
+      title: 'Weekly Horoscope October 27th to November 2nd - True Sidereal Astrology'
+    },
+    previous: {
+      id: 'dQw4w9WgXcQ',
+      title: 'Weekly Horoscope October 20th to October 26th - True Sidereal Astrology'
+    }
+  };
+
+  const currentVideo = videos[activeTab];
 
   return (
     <div className="min-h-screen bg-white py-12 px-4">
@@ -40,9 +52,10 @@ export default function HoroscopePage() {
           <div className="mb-8">
             <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
               <iframe
+                key={currentVideo.id}
                 className="absolute top-0 left-0 w-full h-full"
-                src="https://www.youtube.com/embed/4jQcGhRZZsM"
-                title="Weekly Horoscope October 27th to November 2nd - True Sidereal Astrology"
+                src={`https://www.youtube.com/embed/${currentVideo.id}`}
+                title={currentVideo.title}
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerPolicy="strict-origin-when-cross-origin"
@@ -81,9 +94,9 @@ export default function HoroscopePage() {
         <div className="text-center mb-12">
           <p className="text-xl mb-2">
             GET THE WEEKLY HOROSCOPE SENT TO YOUR INBOX{' '}
-            <Link to="/joinnewsletter" className="text-indigo-600 hover:text-indigo-800 font-semibold">
+            <a href="/joinnewsletter" className="text-indigo-600 hover:text-indigo-800 font-semibold">
               EVERY SUNDAY
-            </Link>
+            </a>
             .
           </p>
         </div>
@@ -92,16 +105,16 @@ export default function HoroscopePage() {
         <div className="border-t border-gray-300 pt-8">
           <p className="text-xl mb-2">
             NEW TO{' '}
-            <Link to="/siderealastrology" className="text-indigo-600 hover:text-indigo-800 font-semibold">
+            <a href="/siderealastrology" className="text-indigo-600 hover:text-indigo-800 font-semibold">
               SIDEREAL ASTROLOGY
-            </Link>
+            </a>
             ?
           </p>
           <p className="text-xl">
             YOUR SIGN MIGHT BE DIFFERENT. SEE YOUR{' '}
-            <Link to="/true-sidereal-sign" className="text-indigo-600 hover:text-indigo-800 font-semibold">
+            <a href="/true-sidereal-sign" className="text-indigo-600 hover:text-indigo-800 font-semibold">
               TRUE SIDEREAL SIGN
-            </Link>
+            </a>
             .
           </p>
         </div>

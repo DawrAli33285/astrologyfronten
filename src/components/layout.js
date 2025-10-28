@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, Outlet } from 'react-router-dom';
+import ScrollMiddleware from '../scrollMiddleware';
 
 function Layout() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -147,7 +148,7 @@ function Layout() {
 
   return (
     <div className="min-h-screen flex flex-col bg-gray-900">
-   
+   <ScrollMiddleware/>
       <header className="bg-white shadow-md relative z-50">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
@@ -201,7 +202,7 @@ function Layout() {
             </nav>
 
             <Link
-              to="/true-signs"
+              to="/sidereal-signs"
               className="hidden lg:block bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 rounded-md text-sm font-medium transition-colors"
             >
               VIEW YOUR TRUE SIGNS

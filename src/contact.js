@@ -78,7 +78,7 @@ export default function ContactPage() {
 
   return (
     <div className="min-h-screen bg-white">
-      <div className="max-w-4xl mx-auto px-6 py-16">
+      <div className="max-w-6xl mx-auto px-6 py-16">
         {/* FAQ Section */}
         <div className="mb-20">
           <h2 className="text-3xl font-light mb-8">
@@ -127,9 +127,9 @@ export default function ContactPage() {
           Contact
         </h1>
 
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-16 lg:gap-8">
           {/* Left Column - Contact Info and Form */}
-          <div>
+          <div className="min-w-0">
             <p className="mb-4 text-gray-800 leading-relaxed">
               Didn't find the answer to your question in the{' '}
               <a href="/faq" className="text-blue-600 hover:underline">
@@ -145,14 +145,64 @@ export default function ContactPage() {
               </a>
             </p>
 
-            <p className="mb-4 text-gray-800 leading-relaxed">Or, simply use the form below:</p>
+            <p className="mb-6 text-gray-800 leading-relaxed">Or, simply use the form below:</p>
 
-            <iframe
-              title="Contact Form"
-              src="https://5e794280.sibforms.com/serve/MUIEANZLQdY2awYFM2IIW2LvATymfNrfrf8jP4bVqH28Mu9w22FdbXf8_GINXjB_Ig2FA8JwPrff6jv2_lMMbs9gF-5z_s-8a8jeJIK7ywkUylve_S8qH_6DrCHz7IAE_hMG3J8heGHvaEpUs5EKdsma-_SRO77KqnXKbnjhiR5MTK0MM17LB1H9hOtsPeyNhNbqWuIEuuZ7LlN4"
-              className="w-full h-96 border-0 rounded shadow-sm"
-              scrolling="auto"
-            />
+            <form className="space-y-4">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Name
+                </label>
+                <input
+                  type="text"
+                  placeholder="Your name"
+                  className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  required
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  placeholder="your@email.com"
+                  className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  required
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Subject
+                </label>
+                <input
+                  type="text"
+                  placeholder="Subject"
+                  className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  required
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Message
+                </label>
+                <textarea
+                  placeholder="Your message..."
+                  rows="5"
+                  className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
+                  required
+                />
+              </div>
+
+              <button
+                type="submit"
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded transition-colors duration-200"
+              >
+                Send Email
+              </button>
+            </form>
           </div>
 
           {/* Right Column - Social Links */}
