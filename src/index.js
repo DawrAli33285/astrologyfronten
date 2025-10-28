@@ -31,7 +31,8 @@ import AdminChart from './adminmainchart';
 import AdminMain from './adminmain';
 import TransitPage from './transitpage';
 import SynastryPage from './synastrypage';
-
+import CompositePage from './composite';
+import TransitGraphPage from "./transitgraphpage"
 
 const router = createBrowserRouter([
   {
@@ -73,11 +74,11 @@ const router = createBrowserRouter([
     children: [
       { path: '/admin/main', element: <AdminMain /> },
       { path: '/admin/transit', element: <TransitPage /> },
-      { path: '/admin/graph', element: <App /> },
-      { path: '/admin/return', element: <App /> },
+      { path: '/admin/graph', element: <TransitGraphPage /> },
+      { path: '/admin/return', element: <AdminMain /> },
       { path: '/admin/settings', element: <AdminSettings /> },
       { path: '/admin/synastry', element: <SynastryPage /> },
-      { path: '/admin/composite', element: <App /> },
+      { path: '/admin/composite', element: <CompositePage /> },
       { path: '/admin/chat', element: <AdminChat /> },
       { path: '/admin/docs', element: <AdminDocs /> },
       { path: '/admin/account', element: <AdminProfilePage /> },

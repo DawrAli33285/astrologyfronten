@@ -118,7 +118,7 @@ const TransitChart = () => {
   };
 
   return (
-    <div className="max-w-6xl mx-auto p-8 bg-gray-50">
+    <div className="lg:max-w-6xl mx-auto lg:p-8 ">
       <div className="relative w-full max-w-3xl mx-auto mb-6" style={{ aspectRatio: '1/1' }}>
         <svg viewBox="0 0 800 800" className="w-full h-full">
           {zodiacSigns.map((sign) => {
@@ -532,8 +532,8 @@ const TransitChart = () => {
         <h2 className="text-2xl font-bold text-center mb-6">PROGRESSED & TRANSIT WHEELS</h2>
 
         <div className="space-y-4">
-          <div className="flex items-center gap-4">
-            <label className="w-48 text-right font-medium">Date (dd-month-yyyy):</label>
+          <div className="flex items-center gap-4 flex-col md:flex-row">
+            <label className="w-48 md:text-right font-medium">Date (dd-month-yyyy):</label>
             <div className="flex-1 flex gap-2">
               <input
                 type="text"
@@ -559,8 +559,8 @@ const TransitChart = () => {
             </div>
           </div>
 
-          <div className="flex items-center gap-4">
-            <label className="w-48 text-right font-medium">Time (hh-mm):</label>
+          <div className="flex items-center gap-4 flex-col md:flex-row">
+            <label className="w-48 md:text-right font-medium">Time (hh-mm):</label>
             <div className="flex-1 flex items-center gap-2">
               <input
                 type="text"
@@ -579,8 +579,8 @@ const TransitChart = () => {
             </div>
           </div>
 
-          <div className="flex items-center gap-4">
-            <label className="w-48 text-right font-medium">Location (city, region, country):</label>
+          <div className="flex items-center gap-4 flex-col md:flex-row">
+            <label className="w-48 md:text-right font-medium">Location (city, region, country):</label>
             <input
               type="text"
               value={formData.location}

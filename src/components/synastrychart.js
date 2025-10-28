@@ -104,7 +104,7 @@ const SynastryWheel = () => {
   };
 
   return (
-    <div className="max-w-6xl mx-auto p-8 bg-gray-50">
+    <div className="max-w-6xl mx-auto p-">
 
       <div className="relative w-full max-w-2xl mx-auto mb-6" style={{ aspectRatio: '1/1' }}>
         <svg viewBox="0 0 600 600" className="w-full h-full">
@@ -258,7 +258,7 @@ const SynastryWheel = () => {
             const x = 300 + Math.cos(angle * Math.PI / 180) * radius;
             const y = 300 + Math.sin(angle * Math.PI / 180) * radius;
 
-            // Create house segments
+          
             const startAngle = sign.start - 90;
             const endAngle = startAngle + 30;
             const housePath = describeArc(300, 300, 230, startAngle, endAngle, 80);
@@ -329,7 +329,7 @@ const SynastryWheel = () => {
       </div>
 
      
-      <div className="bg-white rounded-lg shadow-sm p-6 max-w-2xl mx-auto">
+      <div className="bg-white rounded-lg  lg:p-6 lg:max-w-2xl mx-auto">
         <h2 className="text-2xl font-bold text-center mb-6">SYNASTRY WHEEL</h2>
 
         <div className="space-y-6">
@@ -337,8 +337,8 @@ const SynastryWheel = () => {
           <div className="space-y-4 pb-6 border-b border-gray-200">
             <h3 className="font-semibold text-lg">Person 1</h3>
             
-            <div className="flex items-center gap-4">
-              <label className="w-48 text-right font-medium">Name:</label>
+            <div className="flex items-center gap-4 flex-col md:flex-row">
+              <label className="w-48 md:text-right font-medium">Name:</label>
               <input
                 type="text"
                 value={person1Data.name}
@@ -347,8 +347,8 @@ const SynastryWheel = () => {
               />
             </div>
 
-            <div className="flex items-center gap-4">
-              <label className="w-48 text-right font-medium">Date (dd-month-yyyy):</label>
+            <div className="flex items-center gap-4 flex-col md:flex-row">
+              <label className="w-48 md:text-right font-medium">Date (dd-month-yyyy):</label>
               <div className="flex-1 flex gap-2">
                 <input
                   type="text"
@@ -374,8 +374,8 @@ const SynastryWheel = () => {
               </div>
             </div>
 
-            <div className="flex items-center gap-4">
-              <label className="w-48 text-right font-medium">Time (hh-mm):</label>
+            <div className="flex items-center gap-4 flex-col md:flex-row">
+              <label className="w-48 md:text-right font-medium">Time (hh-mm):</label>
               <div className="flex-1 flex items-center gap-2">
                 <input
                   type="text"
@@ -394,8 +394,8 @@ const SynastryWheel = () => {
               </div>
             </div>
 
-            <div className="flex items-center gap-4">
-              <label className="w-48 text-right font-medium">Location (city, region, country):</label>
+            <div className="flex items-center gap-4 flex-col md:flex-row">
+              <label className="w-48 md:text-right font-medium">Location (city, region, country):</label>
               <input
                 type="text"
                 value={person1Data.location}
@@ -409,8 +409,8 @@ const SynastryWheel = () => {
           <div className="space-y-4">
             <h3 className="font-semibold text-lg">Person 2</h3>
             
-            <div className="flex items-center gap-4">
-              <label className="w-48 text-right font-medium">Name:</label>
+            <div className="flex items-center gap-4 flex-col md:flex-row">
+              <label className="w-48 md:text-right font-medium">Name:</label>
               <input
                 type="text"
                 value={person2Data.name}
@@ -419,8 +419,8 @@ const SynastryWheel = () => {
               />
             </div>
 
-            <div className="flex items-center gap-4">
-              <label className="w-48 text-right font-medium">Date (dd-month-yyyy):</label>
+            <div className="flex items-center gap-4 flex-col md:flex-row">
+              <label className="w-48 md:text-right font-medium">Date (dd-month-yyyy):</label>
               <div className="flex-1 flex gap-2">
                 <input
                   type="text"
@@ -446,8 +446,8 @@ const SynastryWheel = () => {
               </div>
             </div>
 
-            <div className="flex items-center gap-4">
-              <label className="w-48 text-right font-medium">Time (hh-mm):</label>
+            <div className="flex items-center gap-4 flex-col md:flex-row">
+              <label className="w-48 md:text-right font-medium">Time (hh-mm):</label>
               <div className="flex-1 flex items-center gap-2">
                 <input
                   type="text"
@@ -466,8 +466,8 @@ const SynastryWheel = () => {
               </div>
             </div>
 
-            <div className="flex items-center gap-4">
-              <label className="w-48 text-right font-medium">Location (city, region, country):</label>
+            <div className="flex items-center gap-4 flex-col md:flex-row">
+              <label className="w-48 md:text-right font-medium">Location (city, region, country):</label>
               <input
                 type="text"
                 value={person2Data.location}

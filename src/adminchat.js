@@ -102,7 +102,7 @@ const AdminChat = () => {
 
 
       <div className="border-t border-gray-200 p-4">
-        <form onSubmit={handleSendMessage} className="flex items-center gap-3">
+        <form onSubmit={handleSendMessage} className="flex items-center gap-3 flex-col md:flex-row">
 
           <div className={`${currentUser.color} w-8 h-8 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0`}>
             {currentUser.avatar}
